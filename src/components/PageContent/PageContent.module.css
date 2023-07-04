@@ -1,0 +1,9 @@
+.content {
+  padding-top: 150px;
+}
+.content h1 {
+  color: var(--clr-grey-1);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
