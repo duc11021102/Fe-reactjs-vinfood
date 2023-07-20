@@ -5,6 +5,7 @@ import RootLayout from "./pages/Root";
 import { Suspense, lazy } from "react";
 import { action as logoutAction } from "./pages/Logout";
 import { tokenLoader } from "./util/auth";
+// import {loader as sectionLoader} from './pages/Home';
 
 const MenuPage = lazy(() => import("./pages/Menu"));
 const CartPage = lazy(() => import("./pages/Cart"));
@@ -19,7 +20,15 @@ const router = createBrowserRouter([
     id: "root",
     loader: tokenLoader,
     children: [
-      { index: true, element: <HomePage /> },
+      {
+        index: true,
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <HomePage></HomePage>
+          </Suspense>
+        ),
+        loader: () => import("./pages/Home").then((module) => module.loader()),
+      },
       {
         path: "menu",
         element: (

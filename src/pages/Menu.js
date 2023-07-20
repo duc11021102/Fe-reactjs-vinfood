@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { Await, json, defer, useLoaderData } from "react-router-dom";
 import MealsList from "../components/Menu/MealsList";
 import PageContent from "../components/PageContent/PageContent";
+import MainFooter from "../components/Footer/MainFooter";
 
 function MenuPage() {
   const { meals } = useLoaderData();
@@ -12,6 +13,7 @@ function MenuPage() {
           {(loadedMeals) => <MealsList meals={loadedMeals}></MealsList>}
         </Await>
       </Suspense>
+      <MainFooter></MainFooter>
       </PageContent>
   );
 }

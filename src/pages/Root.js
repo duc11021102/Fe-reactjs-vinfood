@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Outlet, useLoaderData, useSubmit } from "react-router-dom";
 import CartProvider from "../store/CartProvider";
-
+// import MainFooter from "../components/Footer/MainFooter";
 import MainNavigation from "../components/Navbar/MainNavigation";
 import { getTokenDuration } from "../util/auth";
 
