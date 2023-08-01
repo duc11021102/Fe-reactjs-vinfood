@@ -2,6 +2,8 @@ import classes from "./Section1.module.css";
 import Button from "../UI/Button";
 // import ImgContent from './content.jpg';
 import { Link } from "react-router-dom";
+import title from '../../asset/meal-title.jpg';
+
 
 const Section1 = () => {
   return (
@@ -21,14 +23,8 @@ const Section1 = () => {
             </div>
           </div>
           <div className={classes.docs2}>
-            <svg
-              className="placeholder"
-              width="528"
-              height="396"
-              viewBox="0 0 528 396"
-            >
-              <rect width="528" height="396" stroke="yellow" fill="white" ></rect> 
-            </svg>
+            <img src={title} alt="title">
+            </img>
           </div>
         </div>
       </div>
